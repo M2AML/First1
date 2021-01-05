@@ -1,0 +1,166 @@
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* GENERAL */
+
+p {
+    font-weight: 400;
+}
+h2 {
+    font-weight: 700;
+}
+body {
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+/* CONTAINER */
+
+.container {
+    overflow: hidden;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(185, 75%, 39%);
+}
+
+/* SVG */
+
+.svg img:first-child{
+    position: fixed;
+    transform: rotate(20deg);
+    left: -20%;
+    top: -90%;
+}
+.svg img:last-child {
+    position: fixed;
+    right: -19%;
+    bottom: -100%;
+}
+
+/* CARD */
+
+.card {
+    z-index: 10;
+    position: relative;
+    width: 350px;
+    height: 400px;
+    border-radius: 25px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: #fff;
+    text-align: center;
+    transition: all 0.4s;
+}
+.card:hover {
+    transform:scale(1.03);
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px , rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
+/* BANNER */
+
+.banner {
+    width: auto;
+    height: 125px;
+    background: url(./images/bg-pattern-card.svg);
+    border-radius: 25px 25px 0 0 ;
+}
+
+/* PROFILE IMAGE, NAME, CITY*/
+
+.card img {
+    position: relative;
+    transform:translateY(-50%);
+    border-radius: 50%;
+    border: 5px solid #fff;
+}
+.card .name { 
+    position: relative;
+    transform: translateY(-100%);
+    color: hsl(229, 23%, 23%);
+    font-size: 18px;
+    font-weight: 700;
+}
+span {
+    margin-left: 5px;
+    color: hsl(227, 10%, 46%);
+}
+.card .city {
+    position: relative;
+    transform: translateY(-50%);
+    color: hsl(227, 10%, 46%);
+}
+
+/* ATTRIBUTION */
+
+.attribution ul {
+    position: absolute;
+    bottom: 0;
+    padding: 25px;
+    width: 100%;
+    display: flex;
+    border-top: 1px solid hsl(0, 0%, 59%);
+    justify-content: space-around;
+    text-align: center;
+    list-style: none;
+}
+.attribution ul h2 {
+    font-size: 18px;
+    color: hsl(229, 23%, 23%);
+}
+span {
+    color: hsl(227, 10%, 46%);
+}
+.attribution ul p {
+   font-size: 12px;
+   letter-spacing: 1px;
+   color: hsl(227, 10%, 46%);
+}
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 375px) {
+    .card {
+        width: 320px;
+    }
+    .svg img:first-child{
+        position: fixed;
+        left: -770px;
+        top: -90%;
+    }
+    .svg img:last-child {
+        position: fixed;
+        right: -700px;
+        bottom: -90%;
+    }    
+}
+
+@media screen and (min-width: 376px) and (max-width: 900px) {
+    .svg img:first-child{
+        position: fixed;
+        transform: rotate(-12deg);
+        left: -60%;
+        top: -90%;
+    }
+    .svg img:last-child {
+        position: fixed;
+        right: -60%;
+        bottom: -95%;
+    }
+}
+@media screen and (min-width: 1440px) {
+    .svg img:first-child{
+        position: fixed;
+        transform: rotate(20deg);
+        left: -12%;
+        top: -88%;
+    }
+    .svg img:last-child {
+        position: fixed;
+        right: -15%;
+        bottom: -90%;
+    }
+}
